@@ -3,7 +3,10 @@
 ## Running a dev chain
 
 ```bash
-$ rm -rf tmp && ./target/release/substrate --dev -d tmp --ipfs-server --keep-blocks=100800
+$ cargo run --release -- build-spec --chain=dev > sc_dev_init.json
+$ cargo run --release build-spec --chain=sc_dev_init.json --raw > sc_dev.json
+
+$ rm -rf tmp && cargo run --release -- --chain=sc_dev.json -d tmp --storage-chain --keep-blocks=100800 --ipfs-server --validator --alice
 ```
 
 ## Send `store` transaction
