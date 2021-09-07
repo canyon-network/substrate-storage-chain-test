@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@polkadot/api": "^5.7.1",
+    "@polkadot/keyring": "^7.3.1",
+    "@polkadot/util-crypto": "^7.3.1",
+    "cids": "^1.1.9",
+    "multihashes": "^4.0.3"
+  }
+}
